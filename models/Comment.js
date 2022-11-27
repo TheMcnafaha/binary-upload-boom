@@ -1,11 +1,19 @@
 const mongoose = require("mongoose");
 
 const CommentSchema=new mongoose.Schema({
-    user:String,
+    userId:{   type: mongoose.Schema.Types.ObjectId,
+        required: true
+    },
+    title:String,
     text: String,
     createdAt:{
         type:Date,
-        default:Date.now
+        default:Date.now,
+        required: true
+    },
+    postId:{
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
     }
 })
 

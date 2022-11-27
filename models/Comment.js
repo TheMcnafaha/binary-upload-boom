@@ -14,7 +14,8 @@ const CommentSchema=new mongoose.Schema({
     postId:{
         type: mongoose.Schema.Types.ObjectId,
         required: true
-    }
+    },
+    userName:String
 })
 
 module.exports=mongoose.model("Comment",CommentSchema)

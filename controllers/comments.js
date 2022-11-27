@@ -11,8 +11,12 @@ module.exports={
                 postId:req.params.postId,
                 title:req.body.title,
                 text:req.body.text,  
+                userName:req.user.userName
 
             })
+
+            // send back user, and load new comment
+            res.redirect(`/post/${req.params.postId}`)
         } catch (error) {
             console.log(error);
         }

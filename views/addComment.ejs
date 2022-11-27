@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+
+<div class="mt-5">
+    <h2>Add a comment to <%= post.title %> </h2>
+    <form action="/comment/<%= post._id %> " method="POST">
+      <div class="mb-3">
+          <label for="title" class="form-label">Comment Title</label>
+          <input type="text" class="form-control" id="title" name="title">
+      </div>
+      <div class="mb-3">
+        <label for="text" class="form-label">Comment Text</label>
+        <textarea class="form-control" id="text" name="text"></textarea>
+      </div>
+      <button type="submit same-size" class="btn btn-primary" value="Upload">Submit</button>
+    </form>
+  </div>
+
+<%- include('partials/footer') -%>
